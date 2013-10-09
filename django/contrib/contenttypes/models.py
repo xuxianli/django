@@ -125,9 +125,9 @@ class ContentTypeManager(models.Manager):
 
 @python_2_unicode_compatible
 class ContentType(models.Model):
-    name = models.CharField(max_length=100)
-    app_label = models.CharField(max_length=100)
-    model = models.CharField(_('python model class name'), max_length=100)
+    name = models.CharField(max_length=255)
+    app_label = models.CharField(max_length=255)
+    model = models.CharField(_('python model class name'), max_length=255)
     objects = ContentTypeManager()
 
     class Meta:
